@@ -73,6 +73,11 @@ nav{
     .menu-Button-NavBar{
         display: block;
     }
+
+    .navBar-button{
+      justify-content: center;
+      vertical-align: center;
+    }
   }
   
   @media (max-width: 400px){

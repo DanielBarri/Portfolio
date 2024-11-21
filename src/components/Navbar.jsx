@@ -9,7 +9,7 @@ export function Navbar () {
 
     const handleClick = () => {
         setMenuOpen(!menuOpen)
-        console.log(!menuOpen ? 'menu open' : 'menu closed')
+        console.log(menuOpen)
     }
 
     return (
@@ -30,7 +30,13 @@ export function Navbar () {
                 <li className='hide-OnMobile-NavBar'><a href="">Projects</a></li>  
                 <li className='hide-OnMobile-NavBar'><a href="">Experience</a></li>
                 <li className='hide-OnMobile-NavBar'><a href="">Contact me</a></li>
-                <li onClick={handleClick} className='menu-Button-NavBar'><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>       
+                <li onClick={handleClick} className='menu-Button-NavBar' aria-label='Toggle menu'>
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black">
+                                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                        </svg>
+                    </a>
+                </li>       
             </ul>
        </nav>
     )
